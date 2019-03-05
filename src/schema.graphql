@@ -1,0 +1,25 @@
+// Root field for GrphQL query
+const typeDefs = `
+type Query {
+  info: String!
+  feed:[Link!]!
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
+}
+`
+
+// In memory store for links information 
+let links = [{
+  id:`link-0`,
+  url:`www.howtographql.com`,
+  description:`Full stack tutorial for Graph QL`
+},
+{
+  id:`link-1`,
+  url:`www.google.com`,
+  description:`Search engine`
+}]
